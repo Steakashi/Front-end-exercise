@@ -118,7 +118,7 @@ var bookList = new Vue({
       d.setTime(d.getTime() + (24*60*60*1000));
       var quantity = parseInt(getCookie(book['isbn']));
 
-      if(Number.isInteger(quantity)) book['quantity'] = quantity+1;
+      if(Number.isInteger(quantity)) bookList.updateQuantity(index, 1);
       else book['quantity'] = 1;
 
       var cookieString = book['isbn']+"="+book['quantity']+"; expires=" + d.toUTCString();
@@ -217,7 +217,10 @@ var bookList = new Vue({
     updateQuantity: function(index, value){
 
       bookList.books[index]['quantity'] += value;
+
       if(bookList.books[index]['quantity'] < 1 || value == 0) document.cookie = bookList.books[index]['isbn'] + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+      else document.cookie = bookList.books[index]['isbn'] + "=" + bookList.books[index]['quantity'];
+
       bookList.update();
 
     },
