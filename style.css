@@ -1,0 +1,74 @@
+h1{
+  color:grey;
+  font-size:2em;
+  padding:20px 0;
+}
+
+.thumbnail, .thumbnail_small{
+  float:left;
+  padding:0;
+  margin: 0 20px 0 0;
+}
+
+.thumbnail{
+  height:150px;
+}
+
+.thumbnail_small{
+  height:60px;
+}
+
+.smallerText{
+  font-size:.2em;
+}
+
+.floatLeft{
+  float:left;
+}
+
+.floatRight{
+  float:right;
+}
+
+.replaceButton{
+  position:relative; top:-40px;
+  margin-left:16px;
+}
+
+#listOfEltInCart + div{
+  text-align:right;
+}
+
+#cart{
+  background-color: rgb(230,230,230);
+  padding:20px;
+}
+
+.cartTitle{
+  text-align:right;
+}
+
+.noDisplay{
+  display:none;
+}
+
+#cart .list-group-item{
+}
+
+#cart .list-group-item:nth-child(2), #cart .list-group-item:nth-child(2) > h6{
+  text-align:right;
+  margin:0;
+}
+
+h6{
+  margin-right: 20px;
+}
+
+h6 p{
+  display:inline;
+  margin-right:20px;
+}
+
+h6 button{
+  width:30px;
+}
